@@ -17,3 +17,8 @@ test('increase button increments by 1', () => {
   fireEvent.click(button)
   expect(screen.getByRole('counter')).toHaveTextContent('2')
 })
+
+test('renders a decrease button', () => {
+  render(<App />)
+  expect(screen.getByRole('decrease')).toHaveTextContent('-')
+})

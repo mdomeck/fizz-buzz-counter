@@ -6,6 +6,7 @@ function App() {
 
   return (
     <div className="App">
+      <button role='decrease'>-</button>
       <span role='counter'> {counter} </span>
       <button role='increase' onClick={increase}>+</button>
     </div>
