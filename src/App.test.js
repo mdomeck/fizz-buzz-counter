@@ -34,3 +34,12 @@ test('renders output', () => {
   render(<App />)
   expect(screen.getByRole('output')).toBeInTheDocument()
 })
+
+test('output returns Fizz', () => {
+  render(<App />)
+  const button = screen.getByRole('increase')
+  fireEvent.click(button)
+  fireEvent.click(button)
+  expect(screen.getByRole('counter')).toHaveTextContent('3')
+  expect(screen.getByRole('output')).toHaveTextContent('Fizz')
+})

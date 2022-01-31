@@ -7,9 +7,9 @@ function App() {
   return (
     <div className="App">
       <div>
-      <button role='decrease' onClick={decrease}>-</button>
-      <span role='counter'> {counter} </span>
-      <button role='increase' onClick={increase}>+</button>
+        <button role='decrease' onClick={decrease}>-</button>
+        <span role='counter'> {counter} </span>
+        <button role='increase' onClick={increase}>+</button>
       </div>
       <span role='output'>{output()}</span>
     </div>
@@ -25,6 +25,9 @@ function App() {
   }
 
   function output() {
+    if (counter % 3 === 0) {
+      return 'Fizz'
+    }
     return counter
   }
 }
