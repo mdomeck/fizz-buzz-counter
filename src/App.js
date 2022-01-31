@@ -7,6 +7,7 @@ function App() {
   return (
     <div className="App">
       <span role='counter'> {counter} </span>
+      <button role='increase'>+</button>
     </div>
   );
 }
