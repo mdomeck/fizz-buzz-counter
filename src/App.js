@@ -25,6 +25,9 @@ function App() {
   }
 
   function output() {
+    if (counter % 5 === 0) {
+      return 'Buzz'
+    }
     if (counter % 3 === 0) {
       return 'Fizz'
     }
