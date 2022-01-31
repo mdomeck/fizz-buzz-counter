@@ -22,3 +22,10 @@ test('renders a decrease button', () => {
   render(<App />)
   expect(screen.getByRole('decrease')).toHaveTextContent('-')
 })
+
+test('decrease button stops at 1', () => {
+  render(<App />)
+  const button = screen.getByRole('decrease')
+  fireEvent.click(button)
+  expect(screen.getByRole('counter')).toHaveTextContent('1')
+})
