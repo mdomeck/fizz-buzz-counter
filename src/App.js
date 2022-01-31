@@ -7,9 +7,13 @@ function App() {
   return (
     <div className="App">
       <span role='counter'> {counter} </span>
-      <button role='increase'>+</button>
+      <button role='increase' onClick={increase}>+</button>
     </div>
-  );
+  )
+
+  function increase() {
+    setCounter(count => count + 1)
+  }
 }
 
 export default App;
