@@ -6,9 +6,12 @@ function App() {
 
   return (
     <div className="App">
+      <div>
       <button role='decrease' onClick={decrease}>-</button>
       <span role='counter'> {counter} </span>
       <button role='increase' onClick={increase}>+</button>
+      </div>
+      <span role='output'>{output()}</span>
     </div>
   )
 
@@ -19,6 +22,10 @@ function App() {
   function decrease() {
     if (counter > 1)
       setCounter(count => count - 1)
+  }
+
+  function output() {
+    return counter
   }
 }
 

@@ -29,3 +29,8 @@ test('decrease button stops at 1', () => {
   fireEvent.click(button)
   expect(screen.getByRole('counter')).toHaveTextContent('1')
 })
+
+test('renders output', () => {
+  render(<App />)
+  expect(screen.getByRole('output')).toBeInTheDocument()
+})
